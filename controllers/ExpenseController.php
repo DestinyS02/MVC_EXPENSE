@@ -10,16 +10,17 @@ class ExpenseController extends Controller {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $model = $this->loadModel('Expense');
             $model->add($_POST['title'], $_POST['amount']);
-            header('Location: /');
+            header('Location: /MVC_EXPENSE/public_html/index.php');
         } else {
             $this->loadView('expenses/add');
         }
     }
 
-    public function delete($id) {
+    public function delete($var) {
+        $id = $var['id'];
         $model = $this->loadModel('Expense');
         $model->delete($id);
-        header('Location: /');
+        header('Location: /MVC_EXPENSE/public_html/index.php');
     }
 }
 ?>

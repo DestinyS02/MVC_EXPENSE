@@ -9,7 +9,7 @@
     <form method="POST">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required>
-        <label for="amount">Amount:</label>
+        <label for="amount">Prize:</label>
         <input type="number" id="amount" name="amount" required>
         <button type="submit">Add Expense</button>
     </form>
